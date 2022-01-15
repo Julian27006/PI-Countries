@@ -14,11 +14,21 @@ describe('Country routes', () => {
   .catch((err) => {
     console.error('Unable to connect to the database:', err);
   }));
-  beforeEach(() => Country.sync({ force: true })
-    .then(() => Country.create(pokemon)));
-  describe('GET /countries', () => {
+  describe('trae todos los paises de mi base de datos cuando ejecuto ruta /paises', () => {
     it('should get 200', () =>
-      agent.get('/countries').expect(200)
+      agent.get('/paises').expect(200)
+    );
+  });
+});
+
+describe('Activity routes', () => {
+  before(() => conn.authenticate()
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  }));
+  describe('trae todas las actividades de mi base de datos cuando ejecuto ruta /actividades', () => {
+    it('should get 200', () =>
+      agent.get('/actividades').expect(200)
     );
   });
 });

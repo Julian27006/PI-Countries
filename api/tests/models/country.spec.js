@@ -1,4 +1,4 @@
-const { Country, conn } = require('../../src/db.js');
+const { Country, conn, Activity } = require('../../src/db.js');
 const { expect } = require('chai');
 
 describe('Country model', () => {
@@ -7,7 +7,7 @@ describe('Country model', () => {
       console.error('Unable to connect to the database:', err);
     }));
   describe('Validators', () => {
-    beforeEach(() => Country.sync({ force: true }));
+    beforeEach(() => Country.sync({ force: false }));
     describe('name', () => {
       it('should throw an error if name is null', (done) => {
         Country.create({})
@@ -16,6 +16,26 @@ describe('Country model', () => {
       });
       it('should work when its a valid name', () => {
         Country.create({ name: 'Argentina' });
+      });
+    });
+  });
+});
+
+describe('Activity model', () => {
+  before(() => conn.authenticate()
+    .catch((err) => {
+      console.error('Unable to connect to the database:', err);
+    }));
+  describe('Validators', () => {
+    beforeEach(() => Activity.sync({ force: false }));
+    describe('name', () => {
+      it('should throw an error if name is null', (done) => {
+        Activity.create({})
+          .then(() => done(new Error('It requires a valid name')))
+          .catch(() => done());
+      });
+      it('should work when its a valid name', () => {
+        Activity.create({ name: 'Golf' });
       });
     });
   });
