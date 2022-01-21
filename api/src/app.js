@@ -22,14 +22,15 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use('/api', routes);
+server.use('/', routes); // http://localhost:3001/routes ROUTES SON MIS RUTAS /paises o /actividades
+//Acá hago que en http://localhost:3001/ pueda usar todas las rutas
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   const status = err.status || 500;
   const message = err.message || err;
   console.error(err);
-  res.status(status).send(message);
+  res.status(status).send({message});
 });
 
 module.exports = server;

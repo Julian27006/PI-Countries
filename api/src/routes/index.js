@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const CountryRoute = require ("./country.js");
+const CountryRoute = require ("./Country.js");
 const ActivityRoute = require ("./Activity.js")
 
 

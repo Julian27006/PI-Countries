@@ -19,4 +19,4 @@ module.exports = (sequelize) => {
       {timestamps: false}, // PARA NO AGREGAR  updated_at/created_at
       {freezeTableName: true,} //PARA QUE SEQUALIZE USE EL NOMBRE EN SINGULAR DE LA TABLA
     );
-}; 
+};

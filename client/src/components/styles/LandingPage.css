@@ -1,0 +1,43 @@
+body{
+    background-image: url(../styles/img/World.jpg);
+    font-family: 'Josefin Sans', sans-serif;
+    align-items: center;
+    box-sizing: border-box;
+    width: 1200px;
+    height: auto;
+}
+
+.Boton{
+    position: relative;
+    left: 100px;
+}
+
+.Welcome{
+    color: aliceblue;
+    font-size: 2.5rem;
+    position: relative;
+    left: 100px;
+}
+.Presentacion{
+    color: black;
+    height: 70px;
+    width: 1365px;
+    position: relative;
+    bottom: -420px;
+    background-color:ghostwhite;
+    filter:alpha(opacity=60);
+    opacity:.6;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.TextoPresentacion{
+    position: relative;
+    top: 20px;
+    font-size: 1.5rem;;
+}
+
+.bb{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}

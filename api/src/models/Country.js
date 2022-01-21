@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
@@ -49,7 +49,7 @@ module.exports = (sequelize) => {
       allowNull: true
     },  
   },
-  {timestamps: false},  // CON ESTO NO AGREGO  updated_at/created_at
+  {timestamps: false},  // PARA NO AGREGAR  updated_at/created_at
   {freezeTableName: true,} //PARA QUE SEQUALIZE USE EL NOMBRE EN SINGULAR DE LA TABLA
   );
 };

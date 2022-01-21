@@ -3,8 +3,9 @@ const { Country, Activity } = require('../db');
 const { Op } = require('sequelize');
 const router = Router();
 
-router.get('/', async (req, res, next) =>{
+router.get('/', async (req, res, next) =>{ 
     let Name = req.query.name
+    
         if (Name) {    //ACA ME TRAIGO TODOS LOS PAISES
             try{
                 let paQuery = await Country.findAll({
@@ -18,7 +19,7 @@ router.get('/', async (req, res, next) =>{
                     return res.json(paQuery)
                 }
             }
-            catch(errro){
+            catch(error){
                 next(error);
             }
         }
@@ -26,6 +27,7 @@ router.get('/', async (req, res, next) =>{
         const paisesBd = await Country.findAll({
             include: {model: Activity}
         })
+       
         return res.json(paisesBd)
     }
     catch(error){
@@ -60,6 +62,9 @@ router.get('/', async (req, res, next) =>{
     
     
 module.exports = router;
+
+
+
 
 
 

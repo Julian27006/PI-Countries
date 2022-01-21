@@ -1,0 +1,91 @@
+.card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container .card img{
+    width: 200px;
+    height: 150px;
+}
+
+.card{
+    float: left;
+    justify-content: space-between;
+    display: flex;
+    width: 350px;
+    margin: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    left: 85px;
+}
+
+.searchbar{
+    width: 100%;
+	padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.btnAdmin{
+    padding: 5px 20px;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btnAdmin:hover{
+    background-color: cornflowerblue;
+    color: white;
+    transition:0.5s;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.ToLanding{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.CreateActivities{
+    color:aliceblue;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+    box-sizing: border-box;
+    justify-content: center;
+    display: absolute;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.ToActivities{
+    position: relative;
+    left: 120px;
+}
+
+.paginado{
+    position: relative;
+    left: 20px;
+}
+
+.ContenedorBotones{
+    position: relative;
+    left: 60px;
+}
